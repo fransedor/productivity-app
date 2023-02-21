@@ -1,15 +1,14 @@
-<script>
-</script>
+<script lang="ts">
+	import { browser } from "$app/environment";
+	import Cookies from "js-cookie";
 
-<div>
-	<script src="https://sdk.scdn.co/spotify-player.js"></script>
-	<script>
+	if (browser) {
 		window.onSpotifyWebPlaybackSDKReady = () => {
-			const token = Cookies.get("token")
+			const token = Cookies.get("spotify_access") ;
 			const player = new Spotify.Player({
 				name: 'Web Playback SDK Quick Start Player',
 				getOAuthToken: (cb) => {
-					cb(token);
+					cb(token!);
 				},
 				volume: 0.5
 			});
@@ -38,5 +37,12 @@
 
 			player.connect();
 		};
+	}
+</script>
+
+<div>
+	<script src="https://sdk.scdn.co/spotify-player.js"></script>
+	<script>
+		
 	</script>
 </div>

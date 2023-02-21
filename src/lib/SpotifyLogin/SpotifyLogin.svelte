@@ -5,7 +5,7 @@
 
 	const loginButtonHandler = () => {
 		const scope =
-			'user-read-private user-read-email user-read-playback-state user-modify-playback-state';
+			'user-read-private user-read-email user-read-playback-state user-modify-playback-state streaming';
 		const state = generateRandomString(16);
 		var auth_query_parameters = new URLSearchParams({
 			response_type: 'code',
