@@ -1,9 +1,9 @@
+<script>
+	import Navbar from "../lib/Navbar/Navbar.svelte";
+</script>
+
 <div class="layout">
-	<nav>
-		<a href="/about">About</a>
-		<a href="/tasks">Tasks</a>
-		<a href="/timeline">Timeline</a>
-	</nav>
+	<Navbar />
 	<slot></slot>
 </div>
 
@@ -12,12 +12,5 @@
 	.layout {
 		display: flex;
 	}
-	nav {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-	a {
-		text-decoration: none;
-	}
+	
 </style>
