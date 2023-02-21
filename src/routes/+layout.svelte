@@ -4,7 +4,9 @@
 
 <div class="layout">
 	<Navbar />
-	<slot></slot>
+	<div class="page-content">
+		<slot></slot>
+	</div>
 </div>
 
 
@@ -12,5 +14,7 @@
 	.layout {
 		display: flex;
 	}
-	
+	.page-content {
+		margin-left: 60px;
+	}
 </style>
